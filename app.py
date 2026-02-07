@@ -9,6 +9,13 @@ def hello():
         "message": f"Hello {name}"
     })
 
+@app.route("/thanos")
+def thanos():
+    name = request.args.get("name", "World")
+    return jsonify({
+        "message": f"Hello {name}"
+    })
+  
 @app.route("/blackwidow")
 def blackwidow():
     name = request.args.get("name", "This is Black Widow")
