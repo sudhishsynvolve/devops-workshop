@@ -2,9 +2,9 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route("/hello")
-def hello():
-    name = request.args.get("name", "World")
+@app.route("/ironman")
+def ironman():
+    name = request.args.get("name", "I am ironman from avengers")
     return jsonify({
         "message": f"Hello {name}"
     })
