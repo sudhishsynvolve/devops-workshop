@@ -9,5 +9,12 @@ def hello():
         "message": f"Hello {name}"
     })
 
+@app.route("/thanos")
+def thanos():
+    name = request.args.get("name", "World")
+    return jsonify({
+        "message": f"Hello {name}"
+    })
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
