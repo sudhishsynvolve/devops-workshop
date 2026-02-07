@@ -9,6 +9,13 @@ def hello():
         "message": f"Hello {name}"
     })
 
+@app.route("/flash")
+def flash():
+    name = request.args.get("name", "Flash")
+    return jsonify({
+        "message": f"Hello {name}"
+    })
+    
 @app.route("/thanos")
 def thanos():
     name = request.args.get("name", "World")
